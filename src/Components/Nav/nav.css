@@ -1,0 +1,168 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@300&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+#app {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'inter', sans-serif;
+}
+
+#atag {
+  text-decoration: none;
+}
+
+#contactdisplay {
+  text-decoration: none;
+}
+
+.container1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  top: 0;
+  position: sticky;
+  z-index: 10;
+  background-color:  #fbf7fa;
+}
+
+.title {
+  display: flex;
+  gap: 30px;
+  width: 65%;
+}
+
+.navlinks {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  color: #303e6f;
+}
+
+.basket {
+  width: 34%;
+  display: flex;
+  height: 90px;
+  gap: 40px;
+}
+
+#fashionhub {
+  font-weight: 600;
+  color: #303e6f;
+  text-decoration: none;
+}
+
+#basketimg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+}
+
+#category {
+  border: none;
+  background-color: #f1dfed;
+  cursor: pointer;
+  color: #f8dbf0;
+}
+
+#bell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  border: none;
+}
+
+.fa-regular {
+  position: relative;
+
+}
+
+.fa-solid {
+  position: relative;
+  color: #ffa500;
+}
+
+#bells {
+  position: absolute;
+  margin-bottom: 42px;
+  margin-right: -9px;
+  padding: 6.5px;
+  background-color: #f2cd88;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#items-selected {
+  position: absolute;
+  margin-right: -9px;
+  margin-bottom: 35px;
+  width: 1.8rem;
+  height: 1.8rem;
+  padding: 3px;
+  color: #fff;
+  background-color: #303e6f;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.stars{
+ display: flex;
+ gap: 5px;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-image {
+  display: flex;
+  width: 26%;
+  height: 40px;
+  gap: 8px;
+}
+
+.title-image img {
+  width: 50%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#gmorning, #johnson {
+  padding: 3px;
+  font-size: 8px;
+}
+
+#johnson {
+  color: #303e6f;
+  background-color: #f4e8f3;
+}
+
+#gmorning {
+  color: #776e6e;
+}
+
+#contactt {
+  text-decoration: none;
+  cursor: pointer;
+}

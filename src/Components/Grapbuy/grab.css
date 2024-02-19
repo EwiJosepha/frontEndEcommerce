@@ -1,0 +1,53 @@
+
+.container2 {
+  padding-top: 30px;
+}
+
+.buy-now-section {
+  border-radius: 8px;
+  background-color: #f4e8f3;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.grap-50 {
+  background: #f4e8f3;
+  padding-bottom: 20px;
+}
+
+.avatar {
+  background: #f4e8f3;
+  font-size: 13px;
+  font-weight: 500;
+  color: #777;
+}
+
+#img {
+  margin-top: -50px;
+  width: 100%;
+  object-fit: contain;
+  /* display: block; */
+ } 
+
+ #headphone {
+  color: #303e6f;
+  font-size: 22px;
+  padding: 10px;
+  padding-bottom: 14px;
+  width: 50%;
+ }
+
+ #buynow {
+  background: #303e6f;
+  color: #fff;
+  font-size: 12px;
+  width: 20%;
+  padding: 10px;
+  border-radius: 30px;
+  border: 0;
+  outline: 0;
+  box-shadow: 0 6px 6px #553ff040;
+  cursor: pointer;
+ }

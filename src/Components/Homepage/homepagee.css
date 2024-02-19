@@ -1,0 +1,19 @@
+.footer {
+  margin-top: 30px;
+  background-color: #f4e8f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  height: 200px;
+}
+
+#footer {
+  font-weight: 600;
+  font-size: 30px;
+  color: #303e6f;
+}
+
+p {
+  color: #ff0000;
+}
