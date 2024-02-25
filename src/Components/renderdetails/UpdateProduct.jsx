@@ -15,7 +15,21 @@ function UpdateProduct({ data }) {
     border: "1px solid #ccc",
     fontSize: "25px",
     color: "#303e6f",
-  };
+   };
+
+  const divstyle = {
+    border: "1px solid #bbb",
+    borderRadius:" 5px",
+    width: "250px",
+    padding: "20px",
+    height: "500px",
+    background: "#fff",
+    boxShadow:" 0 4px 8px rgba(0, 0, 0, 0.1)",/* Adjust shadow as needed */
+    borderRadius:" 8px",
+    boxSizing: "border-box",
+    marginBottom: "20px",
+    marginTop: "20px"
+  }
 
   const [formData, setFormData] = useState({
     productId: "",
@@ -120,18 +134,9 @@ function UpdateProduct({ data }) {
     }
   };
 
-  // const handleSimilarProductChange = (index, key, value) => {
-  //   const newSimilarProducts = [...similarProducts];
-  //   newSimilarProducts[index] = { ...newSimilarProducts[index], [key]: value };
-  //   setSimilarProducts(newSimilarProducts);
-  // };
-
-  // const handleSimilarProductAdd = () => {
-  //   setSimilarProducts([...similarProducts, { key: "", value: "" }]);
-  // };
-
   return (
     <div>
+      <br/>
       {updatemodal ? (
         <div
           style={{
@@ -142,6 +147,8 @@ function UpdateProduct({ data }) {
             marginTop: "30px",
             padding: "50px",
             background: "#FFD3F8",
+            borderRadius: "10px",
+      
           }}
         >
           <button
@@ -166,7 +173,7 @@ function UpdateProduct({ data }) {
             background: "#FFD3F8",
             color: "#303e6f",
           }}
-        >
+        ><br /><div style={divstyle}>
           <form
             onSubmit={handleSubmit}
             style={{
@@ -307,10 +314,13 @@ function UpdateProduct({ data }) {
                 >
                   close modal
                 </button>
+              
               </div>
+              <br />
               <br />
             </div>
           </form>
+          </div>
         </div>
       )}
     </div>

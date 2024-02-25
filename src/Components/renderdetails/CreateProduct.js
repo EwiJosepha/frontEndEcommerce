@@ -22,8 +22,8 @@ function CreateProduct() {
     border: '1px solid #ccc',
     fontSize: '25px',
     color: '#303e6f',
-    marginLeft: '-75px'
   };
+
   const selectStyle2 = {
     backgroundColor: '#f0f0f0',
     color: '#333',
@@ -32,8 +32,28 @@ function CreateProduct() {
     border: '1px solid #ccc',
     fontSize: '18px',
     color: '#303e6f',
-    marginLeft: '-75px'
   };
+
+  const divstyle = {
+    border: "1px solid #bbb",
+    borderRadius:" 5px",
+    width: "250px",
+    padding: "20px",
+    height: "500px",
+    background: "#fff",
+    boxShadow:" 0 4px 8px rgba(0, 0, 0, 0.1)",/* Adjust shadow as needed */
+    borderRadius:" 8px",
+    boxSizing: "border-box",
+    marginBottom: "20px",
+    marginTop: "20px"
+  }
+
+  const flexx = {
+    display: "flex",
+    padding: "8px",
+    gap:"10px",
+    marginTop: "10px"
+  }
 
   const { data } = useQuery({
     queryKey: ["categories"],
@@ -133,6 +153,7 @@ const handleSimilarProductChange = (index, key, value) => {
             background: '#FFD3F8',
             color: '#303e6f'
           }}>
+            <div style={divstyle}>
             <form onSubmit={handleSubmit} style={{
               maxWidth: '300px',
               height: '100%',
@@ -196,7 +217,7 @@ const handleSimilarProductChange = (index, key, value) => {
               </div>
               <div>
                 <div style={{ paddingBottom: '10px' }}>
-                <h3 style={{marginLeft: '-75px'}}>Product Category:</h3>
+                <h3 >Product Category:</h3>
                   <select name="cat" style={selectStyle} onChange={(e) => handleselect(e.target.value)}>
                     {data?.map((categories, index) => (
                       <option key={index} style={selectStyle} value={categories.categoryId}>
@@ -205,7 +226,7 @@ const handleSimilarProductChange = (index, key, value) => {
                     ))}
                   </select>
                 </div>
-                <h3 style={{marginLeft: '-75px'}}>Similar Products:</h3>
+                <h3>Similar Products:</h3>
                 {similarProducts?.map((similarProduct, index) => (
                   <div key={index}>
                     <input
@@ -222,25 +243,23 @@ const handleSimilarProductChange = (index, key, value) => {
                 ))}
                 <button type="button" onClick={handleSimilarProductAdd} style={selectStyle2}> Add Similar Product</button>
               </div>
-
-
-              <br />
-              <div>
+              <div style={flexx}>
                 <button type="submit" style={{
                   backgroundColor: '#4CAF50',
                   color: 'white',
-                  padding: '8px',
+                  padding: '12px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   border: 'none',
                   borderRadius: '5px',
                   cursor: 'pointer',
-                  width: '100px'
-                }}>Submit</button><br />
-                <button type='Button' onClick={handleCloseClick} style={{ background: '#303e6f', borderRadius: '8px', border: 'none', padding: '8px', color: '#fff', marginBottom: '100px', float: 'right' }}>close modal</button><br />
+                  height: "15px"
+                }}>Submit</button>
+                <button type='Button' onClick={handleCloseClick} style={{ background: '#303e6f', borderRadius: '8px', border: 'none', padding: '8px', color: '#fff', marginBottom: '100px', }}>close modal</button>
               </div>
             </form>
+              </div>
 
           </div>
         )}

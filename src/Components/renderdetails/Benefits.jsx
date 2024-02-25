@@ -38,7 +38,7 @@ return (
   <p id="space">Rubber outsole with aggressive traction pattern adds durable grip.</p>  </div>
   </div>
   <div className="container8">
-  <h3 id="prod-description">Product Details</h3>
+  <h3 id="prod-description" style={{padding: "10px"}}>Product Details</h3>
   <div className="ckecked">
   <i className="fa-regular fa-circle-check"></i>
   <p id="space">Not intended for use as Personal Protective Equipment (PPE)</p>
@@ -50,7 +50,7 @@ return (
   </div>
   </div>
   <div className="contaiiiner9">
-  <h3 id="prod-description">More Details</h3>
+  <h3 id="prod-description" style={{padding: "10px"}}>More Details</h3>
   <div className="ckecked">
   <i className="fa-regular fa-circle-check"></i>
   <p id="space">Lunarlon midsole delivers ultra-plush responsiveness</p>

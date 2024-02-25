@@ -77,11 +77,11 @@ function Products() {
 
             <div className="mainlydescription">
               <div className="display-des">
-                <h3 id="prod-description">Product Description</h3>
+                <h3 id="prod-description" style={{padding: "10px"}}>Product Description</h3>
                 {des?.map((des) => (
-                  <p id="pr">
+                  <h5 id="pr" style={{padding: "10px"}}>
                     <i>{des.productDescription}</i>
-                  </p>
+                  </h5>
                 ))}
               </div>
             </div>
@@ -227,8 +227,7 @@ function Products() {
         </div>
       </div>
       <br />
-      <hr />
-      <hr />
+
       {data && <UpdateProduct data={data} />}
     </div>
   );
