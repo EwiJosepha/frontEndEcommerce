@@ -98,7 +98,6 @@ function Mealcard() {
         {hide ? (
           <>
             {catdata2?.map((item) => {
-              console.log(item);
               return (
                 <div className="top">
                   <div className="subcard" id="subcards">
