@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import * as yup from "yup"
+import {yupResolver, yupResolvers} from "@hookform/resolvers/yup"
+import {useForm} from "react-hook-form"
 import { useQuery } from "@tanstack/react-query";
+import { useNavigate } from "react-router-dom";
 
 function UpdateProduct({ data }) {
   const [updatemodal, setUpdatemodal] = useState(true);
   const [deleteProd, setDeleteProd] = useState();
   const [catId, setCatId] = useState("");
   const [categoryName, setCategoryName] = useState("");
+  const navigate = useNavigate()
 
   const selectStyle = {
     backgroundColor: "#f0f0f0",
@@ -30,6 +35,21 @@ function UpdateProduct({ data }) {
     marginBottom: "20px",
     marginTop: "20px"
   }
+
+  // const schema = yup.object().shape({
+  //   productName: yup.string().max(20).min(4).required(),
+  //   productQuantity: yup.string().min(1).max(70).required(),
+  //   productUrl: yup.string().required(),
+  // })
+
+  // const {register, handleSubmit: handleSubmit2, formstate: errors} = useForm({
+  //   resolver: yupResolver(schema)
+  // })
+
+  // function onSubmit(data) {
+  //   console.log(data);
+  //   handleSubmit(data)
+  // }
 
   const [formData, setFormData] = useState({
     productId: "",
@@ -71,8 +91,8 @@ function UpdateProduct({ data }) {
     });
   };
 
-  console.log(catId);
-  console.log(categoryName);
+  // console.log(catId);
+  // console.log(categoryName);
 
   function isUpdateTrue() {
     setUpdatemodal(false);
@@ -104,7 +124,7 @@ function UpdateProduct({ data }) {
     }
   }
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e, dat) => {
     e.preventDefault();
 
     try {
@@ -127,11 +147,12 @@ function UpdateProduct({ data }) {
         }
       );
 
-      console.log("Meal updated successfully:", updateValues.data);
+      console.log("Product updated successfully:", updateValues.data);
       console.log(updatedProducted);
     } catch (err) {
       console.log(err.message);
     }
+    navigate("/")
   };
 
   return (
@@ -196,13 +217,13 @@ function UpdateProduct({ data }) {
                 }}
               >
                 ProductName:
-                <input
+             <input
                   type="text"
                   name="productName"
                   value={formData.productName}
                   onChange={(e) => handleChange(e)}
                   style={{ padding: "8px", width: "60%" }}
-                />
+           required/>
               </label>
             </div>
             <div style={{ paddingBottom: "10px", width: "100%" }}>
@@ -223,7 +244,7 @@ function UpdateProduct({ data }) {
                   value={formData.productQuantity}
                   onChange={(e) => handleChange(e)}
                   style={{ padding: "8px", width: "60%" }}
-                />
+                  required />
               </label>
             </div>
             <div style={{ paddingBottom: "10px", width: "100%" }}>
@@ -244,7 +265,7 @@ function UpdateProduct({ data }) {
                   value={formData.productUrl}
                   onChange={(e) => handleChange(e)}
                   style={{ padding: "8px", width: "60%" }}
-                />
+               required/>
               </label>
             </div>
 

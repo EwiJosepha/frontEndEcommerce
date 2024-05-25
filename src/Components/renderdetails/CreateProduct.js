@@ -176,7 +176,7 @@ const handleSimilarProductChange = (index, key, value) => {
                     value={input2}
                     onChange={(e) => setInput2(e.target.value)}
                     style={{ padding: '8px', width: '60%' }}
-                  />
+                  required/>
                 </label>
               </div>
               <div style={{ paddingBottom: '10px', width: '100%' }}>
@@ -194,7 +194,7 @@ const handleSimilarProductChange = (index, key, value) => {
                     value={input3}
                     onChange={(e) => setInput3(e.target.value)}
                     style={{ padding: '8px', width: '60%' }}
-                  />
+                  required/>
                 </label>
               </div>
               <div style={{ paddingBottom: '10px', width: '100%' }}>
@@ -212,7 +212,7 @@ const handleSimilarProductChange = (index, key, value) => {
                     value={input4}
                     onChange={(e) => setInput4(e.target.value)}
                     style={{ padding: '8px', width: '60%' }}
-                  />
+                  required/>
                 </label>
               </div>
               <div>
