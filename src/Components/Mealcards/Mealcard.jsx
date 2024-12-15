@@ -52,8 +52,8 @@ function Mealcard() {
   //handles option clicked o or selected
 
   const handleselect = async (id) => {
-    console.clear();
-    console.log('fetching ', id);
+    // console.clear();
+    // console.log('fetching ', id);
     const categorySelected = catdata.find((cat) => cat.categoryId == id);
 
     setCatId(id);
@@ -170,6 +170,8 @@ function Mealcard() {
             })}
           </>
         )}
+
+        {/* <Paginatte/> */}
       </div>
     </>
   );
